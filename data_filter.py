@@ -44,12 +44,15 @@ print "Zero expression counts file created successfully"
 
 # calculate number of identifiers with at least x zero expression instances
 percent_map = {1:[1, zero_count], 25:[305, zero_count_25], 50:[609, zero_count_50], 75:[914, zero_count_75], 90:[1096, zero_count_90]}
-percent_chosen = [75, 90]
+percent_chosen = [25, 50]
 
 for i in xrange(zero_array.shape[0]):
 	for j in percent_chosen:
-		if(zero_array[i] >= percent_map[j][0]):
+		if zero_array[i] >= percent_map[j][0]:
 			percent_map[j][1] += 1
+	
+	if zero_array[i] >= 1:
+		zero_count += 1
 
 print "Number of identifiers with at least one zero expression instance", zero_count
 for j in percent_chosen:
