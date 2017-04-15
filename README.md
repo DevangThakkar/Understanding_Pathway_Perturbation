@@ -14,8 +14,8 @@ ARACNe-AP commands:
 A summary of number of identifiers which have zero expression:
 --------------------------------------------------------------
 
-Number of identifiers with at least one zero expression instance: 7873
-Number of identifiers with at least 25 per cent zero expression instance: 3704
-Number of identifiers with at least 50 per cent zero expression instance: 2857
-Number of identifiers with at least 75 per cent zero expression instance 2056
-Number of identifiers with at least 90 per cent zero expression instance 1452
+- Number of identifiers with at least one zero expression instance: 7873
+- Number of identifiers with at least 25 per cent zero expression instance: 3704
+- Number of identifiers with at least 50 per cent zero expression instance: 2857
+- Number of identifiers with at least 75 per cent zero expression instance 2056
+- Number of identifiers with at least 90 per cent zero expression instance 1452
