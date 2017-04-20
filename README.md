@@ -7,8 +7,8 @@ https://github.com/ucscXena/TF_modules/blob/master/MasterR/Taylor_ARACNe_Interac
 A primary run of ARACNe-AP was conducted on unfiltered data and was stopped after ~40 hours of execution. A filtering protocol was put in place in order to remove genes with zero expression in a lot of samples. Further runs on a 4 CPU machine with 30G of memory lead to execution of a bootstrap taking ~50 minutes to complete.
 
 ARACNe-AP commands:
-- nohup time java -Xmx25G -jar Aracne.jar -e HiSeqV2.txt  -o outputFolder --tfs TF.txt --pvalue 1E-8 --seed 2 --calculateThreshold -threads 4 &
-- nohup time java -Xmx25G -jar Aracne.jar -e HiSeqV2.txt  -o outputFolder --tfs TF.txt --pvalue 1E-8 --seed 2 -- threads 4 &
+- nohup time java -Xmx25G -jar Aracne.jar -e HiSeqV2.txt  -o outputFolder --tfs TF.txt --pvalue 1E-8 --seed 2 --calculateThreshold --threads 4 &
+- nohup time java -Xmx25G -jar Aracne.jar -e HiSeqV2.txt  -o outputFolder --tfs TF.txt --pvalue 1E-8 --seed 2 --threads 4 &
 - nohup time java -Xmx25G -jar Aracne.jar -o outputFolder --consolidate &
 
 
