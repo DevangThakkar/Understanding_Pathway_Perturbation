@@ -1,4 +1,4 @@
-# Understandng Pathway Perturbation
+# Understanding Pathway Perturbation
 
 The aim of this assignment is to try to execute a run of ARACNe-AP on Breast Cancer TFs. The data has been downloaded from the link:
 https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/HiSeqV2 with the list of TFs downloaded from
