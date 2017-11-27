@@ -1,6 +1,13 @@
 # Understanding Pathway Perturbation
 
-The aim of this assignment is to try to execute a run of ARACNe-AP on Breast Cancer TFs. The data has been downloaded from the link:
+The aim of this assignment is to understand and implement algorithms to:
+
+* create a regulatory network from gene expression data,
+* calculate a score and thus, the rankings for individual pathways for each sample.
+
+Selected iterature on inference of regulatory networks includes [[1]](https://doi.org/10.1038/ng1532)(ARACNE-Mutual information), [[2]](https://doi.org/10.1093/bioinformatics/btw216)(ARACNE-Mutual information), [[3]](https://www.ncbi.nlm.nih.gov/pubmed/10902190)(Mutual information), [[4]](https://doi.org/10.1038/ng.3593)(VIPER), [[5]](https://doi.org/10.1038/msb.2010.31)(MARINa), [[6]](https://doi.org/10.1038/ng.3168)(HotNet2) and [[7]](https://doi.org/10.1093/bioinformatics/btt471)(TieDIE). Some review papers on network inference: [[8]](https://doi.org/10.1016/j.biosystems.2008.12.004), [[9]](https://www.nature.com/articles/nmeth.2016), and [[10]](10.3389/fcell.2014.00038) 
+
+ARACNE-AP [atry to execute a run of ARACNe-AP on Breast Cancer TFs. The data has been downloaded from the link:
 https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/HiSeqV2 with the list of TFs downloaded from
 https://github.com/ucscXena/TF_modules/blob/master/MasterR/Taylor_ARACNe_Interactome_Human.TFs 
 
