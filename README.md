@@ -37,7 +37,7 @@ A summary of number of identifiers which have zero expression:
 - Number of identifiers with at least 75 per cent zero expression instance 2056
 - Number of identifiers with at least 90 per cent zero expression instance 1452
 
-Output: On consolidating the bootstraps, we get a [network](../master/output/network.txt) in the form of edges with high MI values and p values below a calculated threshold [(0.02792)](../master/output/miThreshold_p1E-8_samples1218). For example, we can identfy all the downstream 
+Output: On consolidating the bootstraps, we get a [network](../master/output/network.txt) in the form of edges with high MI values and p values below a calculated threshold [(0.02792)](../master/output/miThreshold_p1E-8_samples1218.txt). For example, we can identfy all the downstream 
 ## Calculating scores for a pathway for individual samples
 
 Having inferred the network from the gene expression data, the task now is to calculate a sample-specific score for an individual pathway. The pathway considered is the [FOXM1 pathway](../master/FOXM1.network), an important regulator often overexpressed in cancer [[11]](https://doi.org/10.1158/0008-5472.CAN-11-0640). The FOXM1 pathway has been visualized using the UCSC Xena [Visualization Browser](https://xenabrowser.net/heatmap/) and can be found [here](../master/FOXM1_viz.png).
