@@ -7,14 +7,16 @@ The aim of this assignment is to understand and implement algorithms to:
 
 Selected iterature on inference of regulatory networks includes [[1]](https://doi.org/10.1038/ng1532)(ARACNE-Mutual information), [[2]](https://doi.org/10.1093/bioinformatics/btw216)(ARACNE-Mutual information), [[3]](https://www.ncbi.nlm.nih.gov/pubmed/10902190)(Mutual information), [[4]](https://doi.org/10.1038/ng.3593)(VIPER), [[5]](https://doi.org/10.1038/msb.2010.31)(MARINa), [[6]](https://doi.org/10.1038/ng.3168)(HotNet2) and [[7]](https://doi.org/10.1093/bioinformatics/btt471)(TieDIE). Some review papers on network inference: [[8]](https://doi.org/10.1016/j.biosystems.2008.12.004), [[9]](https://www.nature.com/articles/nmeth.2016), and [[10]](10.3389/fcell.2014.00038) 
 
-ARACNE-AP [atry to execute a run of ARACNe-AP on Breast Cancer TFs. The data has been downloaded from the link:
-https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/HiSeqV2 with the list of TFs downloaded from
-https://github.com/ucscXena/TF_modules/blob/master/MasterR/Taylor_ARACNe_Interactome_Human.TFs 
+ARACNE-AP [2](https://doi.org/10.1093/bioinformatics/btw216) was executed on a gene expression dataset for Breast Cancer transcription factors. The data has been downloaded from the link: https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/HiSeqV2.gz with the list of TFs downloaded from https://github.com/ucscXena/TF_modules/blob/master/MasterR/Taylor_ARACNe_Interactome_Human.TFs
 
-A primary run of ARACNe-AP was conducted on unfiltered data and was stopped after ~40 hours of execution. A filtering protocol was put in place in order to remove genes with zero expression in a lot of samples. Further runs on a 4 CPU machine with 30G of memory lead to execution of a bootstrap taking ~50 minutes to complete.
+### Execution Notes:
+A primary run of ARACNe-AP was conducted on unfiltered data and was stopped after ~40 hours of execution on a single CPU machine. A filtering protocol was put in place in order to remove genes with zero expression in at least *xx* per cent of the samples (where *xx* is one of 10, 25, 50, 75, 90). Further runs on a 4 CPU GCE machine (30G memory) lead to execution of individual bootstraps taking ~50 minutes to complete.
 
-ARACNe-AP commands:
-- `nohup time java -Xmx25G -jar Aracne.jar -e HiSeqV2.txt  -o outputFolder --tfs TF.txt --pvalue 1E-8 --seed 1 --calculateThreshold --threads 4 &`
+Python script to generate filtered file (Input: HiSeqV2.txt, Output: HiSeqV2_Filtered_*xx*.txt)
+- `python check_zeros.py`
+
+ARACNe-AP commands: (increasing java heap size to 25G with multi-threading over 4 threads)
+- `nohup time java -Xmx25G -jar Aracne.jar -e HiSeqV2_Filtered_10.txt  -o outputFolder --tfs TF.txt --pvalue 1E-8 --seed 1 --calculateThreshold --threads 4 &`
 - ```
   for i in {1..10}
   do
